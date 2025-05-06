@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Booking | Code Noir</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <!-- Header and Navigation -->
+        <header>
+            <div class="container">
+                <h1 class="logo">&lt; Code Noir &frasl; &gt;</h1>
+                <p><em>Code by Culture. Design By Vision.</em></p>
+
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="booking.html" class="active">Booking</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Booking Form Section -->
+        <section class="services-overview">
+            <h2>Book a Free 15 Minute Consultation!</h2>
+            <p>Where Creativity Meets Code-- Powered by Her. Fill out the form below to begin your journey.</p>
+
+            <form id="bookingForm" action="#" method="post" style="max-width: 600px; margin: 40px auto">
+                <label for="name">Full Name *</label><br />
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    pattern="[A-Za-z\s]+"
+                    title="Letters only"
+                    style="width: 100%; padding: 10px; margin: 10px 0" /><br />
+
+                <label for="email">Email Address *</label><br />
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    style="width: 100%; padding: 10px; margin: 10px 0" /><br />
+
+                <label for="projectType">Project Type *</label><br />
+                <select id="projectType" name="projectType" required style="width: 100%; padding: 10px; margin: 10px 0">
+                    <option value="" disabled selected>Select a project type</option>
+                    <option value="website">Website Design</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="consulting">Consulting</option></select
+                ><br />
+
+                <label for="date">Preferred Date *</label><br />
+                <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    required
+                    style="width: 100%; padding: 10px; margin: 10px 0" /><br />
+
+                <label for="time">Preferred Time *</label><br />
+                <input
+                    type="time"
+                    id="time"
+                    name="time"
+                    required
+                    style="width: 100%; padding: 10px; margin: 10px 0" /><br />
+
+                <label for="budget">Estimated Budget: <span id="budgetValue">$5000</span></label
+                ><br />
+                <input
+                    type="range"
+                    id="budget"
+                    name="budget"
+                    min="500"
+                    max="10000"
+                    step="500"
+                    value="5000"
+                    oninput="document.getElementById('budgetValue').textContent = '$' + this.value;"
+                    style="width: 100%; margin: 10px 0" /><br />
+
+                <label for="description">Project Description *</label><br />
+                <textarea
+                    id="description"
+                    name="description"
+                    rows="6"
+                    maxlength="500"
+                    required
+                    placeholder="Describe your project..."
+                    style="width: 100%; padding: 10px; margin: 10px 0"></textarea>
+                <small><span id="charCount">0/500</span> characters</small><br /><br />
+
+                <button type="submit" class="cta-button">Submit Booking</button>
+            </form>
+        </section>
+
+        <!--Footer-->
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2025 Code Noir Studio. All rights reserved.</p>
+                <p>
+                    Email: <a href="mailto:info@codenoirstudio.com">info@codenoirstudio.com</a> | Phone:
+                    <a href="tel:+1234567890">(123) 456-7890</a>
+                </p>
+                <p><em>Website Designed by Shadae J.</em></p>
+            </div>
+        </footer>
+    </body>
+</html>
